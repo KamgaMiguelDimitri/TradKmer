@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #fcebc7;
+    background-size: cover;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: #002941;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:calc(100vh - 60px) ;
+    width: 100vw;
+    background: #ffcb6b;
+    padding: 2% 10%;
+}
+.wrapper{
+    background: #002941;
+    padding: 7% 3%;
+    border-radius: 4px;
+    height: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 20px rgba(0, 29, 41, 0.3);
+}
+#checkbox{
+    display: none;
+}
+#form{
+    min-height: 70%;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-content:space-between ;
+    justify-content: center;
+    flex-direction: column ;
+}
+.texte{
+    display: flex;
+    
+}
+.trad{
+    text-align: center;
+    margin-left: 30px;
+    height: 40px;
+    width: auto;
+    padding: 2%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    border-radius: 3px;
+    font-size: 15px;
+    text-transform: capitalize;
+    background: #e0970f;
+    color: white;
+    display: flex;
+    letter-spacing: 1px;
+    align-items: center;justify-content: center;
+}
+.txt{
+    font-size: 20px;
+    border: none;
+    outline: none;
+    min-height: 100px;
+    width: 100%;
+    padding: 15px 2%;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    background: #eceff1;
+    font-family: sans-serif;
+    resize: none;
+}
+.txt_trad{
+    max-height: 120px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.helpContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.help{
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    background: #ffcbcb;
+    border-radius: 3px;
+    transition: all .2s ease-in;
+}
+.help:hover{
+    color: white;
+}
+.help button{
+    outline: none;
+    border: none;
+    padding: 2%;
+    cursor: pointer;
+    width: auto;
+    background: #e0970f;
+    letter-spacing: 1px ;
+    color: rgb(0, 37, 3);
+
+}
+a{
+    text-decoration: none;
+}

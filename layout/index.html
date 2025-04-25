@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traduction</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><h1>TradKmer.com</h1></div>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+            <div id="form">
+                <h1 style="margin-bottom: 30px;">Traduire le texte</h1>
+                <div class="texte">
+                    <input type="text" class="txt" placeholder="Entrez le texte à traduire" id="textToTranslate" />
+                    <button onclick="translateText()" class="trad" >Traduire</button>
+
+                </div>
+                <p id="translatedText" class="txt txt_trad"></p>
+            </div>
+            <div class="helpContainer">
+                <a href="http://" target="Aide" class="help"><button class="help">Voir le Dictionnaire</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function translateText() {
+            const text = document.getElementById("textToTranslate").value;
+            try {
+                const response = await fetch("http://localhost:8000/translate", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ text: text })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById("translatedText").innerText = data.translated_text;
+                   
+                } else {
+                    document.getElementById("translatedText").innerText = "Erreur de traduction";
+                }
+            } catch (error) {
+                console.error("Erreur:", error);
+            }
+        }
+    </script>
+</body>
+</html>

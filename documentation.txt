@@ -1,0 +1,72 @@
+####################################################################################################
+##################### DOCUMENTATION POUR LAPPLICATION DE TRADUCTION TRADKMER #######################
+####################################################################################################
+
+# DESCRIPTION
+
+/****************************************************************
+TRADKMER est une application de traduction web de basee sur 
+l'architecture transformer pour realiser des traductions les 
+plus precises possibles des textes de la langue
+             FRANCAISE vers ==> le LINGALA
+****************************************************************/
+
+#####################################################################################################
+############### COMMENT EXECUTER TRADKMER EN LOCAL ##################################################
+
+/****************************************************************
+Pour cela, je vous invite a suivre les etapes suivantes:
+    1- LANCER LE MODEL DE TRADUCTION
+    2- LANCER L'API DE TRADUCTION AVEC FASTAPI
+    3- LANCER LE FRONTEND
+
+*****************************************************************/
+# LANCER LE MODEL DE TRADUCTION
+
+/***************************************************************
+=>  Dans un premier temps verifier que vous ayez une version 
+    ressante de python installe dans votre machine, pour cela, 
+    saisir la commande : python --version 
+    dans votre terminal
+
+=>  Une fois python installe, vous devez encore telecharger 
+    toutes les packages neccessaires pour lexecution du 
+    model de traduction, pour ce faire saisir :
+    pip install nom_du_package 
+    dans la console de votre ordinateur en mode 
+    administrateur ( pour Windows ).
+    Les packages : pandas, transformers, datasets
+
+=>  Les bibliotheques installlees, il ne vous reste plus qu'a
+    executer le modele en : python traducteurFr_LN2.py
+
+    NB: RASSUREZ VOUS D'ETRE AU BON EMPLACEMENT DANS VOTRE CONSOLE,
+        une fois le modele entraine, vous n'avez plus besoin de 
+        le faire, par consequent n'execute plus ce fichier.
+
+****************************************************************/
+# LANCER L'API DE TRADUCTION AVEC FASTAPI
+
+/***************************************************************
+=>  Installer la librairie FastAPI et Uvicorn, pour ce faire saisir la 
+    commande : pip install fastapi
+               pip install uvicorn
+
+=>  Executer l'API de traduction avec la commande : 
+    uvicorn apiTraduction:app --reload
+
+****************************************************************/
+# LANCER L'API DE TRADUCTION AVEC FASTAPI
+
+/***************************************************************
+=>  Cette etape est tres simple, le frontEnd n'est qu'une simple 
+    page html, donc ouvrez n'importe quel navigateur et faite un
+    cliquer-glisser du fichier html dans le navigateur ou 
+    une autre methode
+
+    NB : Vous devez absolument lancer le frontEnd,
+    sur le port 5500, pour vous faciliter la tache, installer 
+    l'extension LIVE SERVER, sur VS CODE, allez sur l'onglet
+    Extension, puis rechercher "live server", cliquer ensuite
+    sur installer et enfin, relancer vs code
+****************************************************************/
